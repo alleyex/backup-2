@@ -4,9 +4,7 @@ import 'firebase/database';
 
 @Injectable()
 export class DatabaeService {
- 
-      
-
+    
     read(name: string): any {
         return firebase.database().ref(name);
     }

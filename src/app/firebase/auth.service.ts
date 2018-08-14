@@ -18,10 +18,12 @@ export class AuthService {
         return firebase.auth().signOut();
     }
 
-    userState(): Observable<firebase.User> {
+    userState(): Observable<any> {
         const state = Observable.create((observer: Observer<firebase.User>) => {
             firebase.auth().onAuthStateChanged(
-                (user?: firebase.User) => observer.next(user)
+                (user?: firebase.User) => observer.next(user),
+                (error?:firebase.auth.Error) =>observer.error(error),
+                ()=>observer.complete()
             );
         });
         return state;

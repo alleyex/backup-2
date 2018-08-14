@@ -1,12 +1,14 @@
 article{
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
 mat-card {
-  width: 280px;
-  margin:8px;
-  height: 320px;  
+
+  max-width: 480px;
+  margin:4px 8px;
+  min-height: 320px;  
 }
  
 mat-form-field{
@@ -14,14 +16,22 @@ mat-form-field{
 }
 
 mat-card-actions{
-  margin:16px;
+  margin:0;
+  padding: 0;
+  text-align: center;
 }
 
-div{
-  margin:16px;
+div{  
+  margin:20px 0px;
 } 
  
 button{   
-  width: 100%;    
+  width:auto;
+  
+}
+
+button.login{
+  width: 100%; 
+    
 }
 

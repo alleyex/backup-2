@@ -7,8 +7,6 @@ export const config = {
   messagingSenderId: "992264342616"
 };
 
-
-
 export interface Recipient {
   uid: string,
   name?: string,
