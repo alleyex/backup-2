@@ -1,0 +1,33 @@
+article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  mat-card {
+    max-width: 480px;
+    margin:4px 8px;
+    min-height: 320px;  
+  }
+   
+  mat-form-field{ 
+    width:100%;
+  }
+  
+  mat-card-actions{
+    margin:0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  div{
+    margin:20px 0px;
+  } 
+   
+  button{
+    width:auto;
+  }
+  
+  button.login{
+    width: 100%;
+  }

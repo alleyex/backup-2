@@ -4,4 +4,6 @@
               "src/styles.css",
               "node_modules/font-awesome/css/font-awesome.min.css"
             ]
-3. 
+3. npm install @ngx-translate/core --save
+   npm install @ngx-translate/http-loader --save
+   
