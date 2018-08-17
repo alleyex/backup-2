@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ProfileComponent } from './auth/profile/profile.component';
-import { SigninComponent } from './auth/signin/signin.component';
+
 import { PageNotFoundComponent } from './not-found.component';
 
 const appRoutes: Routes = [
-    { path: 'signin', component: SigninComponent },
-    { path: 'profile', component: ProfileComponent },
-    { path: '', redirectTo: '/signin', pathMatch: 'full' },
+    { path: 'home', loadChildren: './home/home.module#HomeModule' },
+    { path: 'user', loadChildren: './auth/auth.module#AuthModule' },
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: '**', component: PageNotFoundComponent }
 ]
 

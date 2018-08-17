@@ -8,7 +8,7 @@
                 <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
                     <mat-card-content>
                         <mat-form-field>
-                            <input formControlName="email" type="email" matInput placeholder="email">
+                            <input formControlName="email" type="email" matInput [placeholder]="'login.email'| translate">
                             <mat-icon matSuffix>email</mat-icon>
                             <mat-error>
                                 please enter a valid email
@@ -16,7 +16,7 @@
                         </mat-form-field>
 
                         <mat-form-field>
-                            <input formControlName="password" type="password" matInput placeholder="密碼">
+                            <input formControlName="password" type="password" matInput [placeholder]="'login.password'| translate">
                             <mat-icon matSuffix>lock</mat-icon>
                             <mat-hint align="end">
                                 {{signinForm.get('password')?.value?.length || 0}} / 6

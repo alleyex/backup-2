@@ -1,0 +1,43 @@
+<mat-toolbar color="primary">
+    <div style="font-size: 12px;">
+        <button mat-icon-button (click)="onToggleLeftnav()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+    <div>{{'app.title' | translate}}</div>
+    <div class="seprator"></div>
+    <div>
+        <ul>
+            <li>
+                <button mat-icon-button>
+                    <mat-icon>home</mat-icon>
+                </button>
+            </li>
+            <li>
+                <button mat-icon-button [matMenuTriggerFor]="m">
+                    <mat-icon>translate</mat-icon>
+                </button>
+                <mat-menu #m="matMenu">
+                    <button #b [id]="language.code" mat-menu-item *ngFor="let language of languages" (click)="languageSelected(language)">{{language.display}}</button>
+                </mat-menu>
+            </li>
+            <li>
+                <button mat-icon-button (click)="onToggleRightnav()">
+                    <mat-icon>person</mat-icon>
+                </button>
+            </li>
+            <li>
+                <button mat-icon-button (click)="onToggleRightnav()">
+                    <mat-icon>help_outline</mat-icon>
+                </button>
+            </li>
+        </ul>
+    </div>
+</mat-toolbar>
+
+<h1>Angular Router</h1>
+<nav>
+  <a routerLink="/user/signin" routerLinkActive="active">Log in</a>
+  <a routerLink="/home" routerLinkActive="active">home</a>
+</nav>
+<router-outlet></router-outlet>

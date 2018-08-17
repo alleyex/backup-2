@@ -9,9 +9,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
     styleUrls: ['./signin.component.scss']
 })
 export class SigninComponent implements OnInit {
-    constructor(private authService: AuthService, private readonly translate: TranslateService) {
-        this.translate.setDefaultLang('zh-tw');
-    }
+    constructor(private authService: AuthService) { }
 
     signinForm: FormGroup;
     ngOnInit() {

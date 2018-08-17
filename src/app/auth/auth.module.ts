@@ -2,36 +2,39 @@ import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { HttpClient } from "@angular/common/http";
 import { NgModule } from "@angular/core";
 import { ProfileComponent } from "./profile/profile.component";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { FirebaseModule } from "../firebase/firebase.mudule";
-import { MaterialModule } from "../material.module";
-import { TranslateModule } from "@ngx-translate/core";
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TranslateModule, TranslateService, TranslateLoader } from "@ngx-translate/core";
 import { SigninComponent } from "./signin/signin.component";
 import { ResetComponent } from "./reset/reset.component";
+import { AuthRoutingModule } from "./auth-routing.module";
+import { SharedModule } from "../shared/shared.module";
 
-export function createTranslateLoader(http: HttpClient) {
-    return new TranslateHttpLoader(http, './assets/i18n/app/', '.json');
+export function reateTranslateLoader(http: HttpClient) {
+    return new TranslateHttpLoader(http, './assets/i18n/auth/', '.json');
 }
 
 @NgModule({
     declarations: [
-        ProfileComponent,      
         SigninComponent,
-        ResetComponent
+        ResetComponent,
+        ProfileComponent        
     ],
-    imports: [   
-        BrowserAnimationsModule,   
-        ReactiveFormsModule,
-        FormsModule,
-        FirebaseModule,
-        MaterialModule,   
-        TranslateModule
+    imports: [
+        SharedModule,      
+        AuthRoutingModule,
+        TranslateModule.forChild({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: (reateTranslateLoader),
+                deps: [HttpClient]
+            },
+            isolate: true
+        })
     ],
-    exports: [
-          
-    ],
-    providers: [],
+    exports: [],
+    providers: []
 })
-export class AuthModule { }
-
+export class AuthModule {
+    constructor(private readonly translate: TranslateService) {
+        this.translate.setDefaultLang('zh-tw');
+    }
+}

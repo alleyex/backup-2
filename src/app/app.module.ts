@@ -1,17 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import { AppComponent } from './app.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { AuthModule } from './auth/auth.module';
 import { PageNotFoundComponent } from './not-found.component';
-
-export function createTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/auth/', '.json');
-}
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { TranslateApp } from './shared/interpret.model';
+import { FirebaseModule } from './firebase/firebase.mudule';
 
 @NgModule({
   declarations: [
@@ -19,17 +16,13 @@ export function createTranslateLoader(http: HttpClient) {
     PageNotFoundComponent
   ],
   imports: [
-    BrowserModule,   
-    AppRoutingModule, 
-    AuthModule,   
+    BrowserModule,
+    BrowserAnimationsModule,
+    FirebaseModule,
+    DashboardModule,
+    AppRoutingModule,
     HttpClientModule,
-    TranslateModule.forRoot({
-      loader: {
-          provide: TranslateLoader,
-          useFactory: (createTranslateLoader),
-          deps: [HttpClient]
-      }  
-  })
+    TranslateApp
   ],
   providers: [],
   bootstrap: [AppComponent]
