@@ -1,9 +1,9 @@
 <article>
     <mat-tab-group>
-        <mat-tab label="Sign in">
+        <mat-tab label="登入">
             <mat-card>
                 <mat-card-header>
-                    <mat-card-title>Sign in</mat-card-title>
+                    <mat-card-title>請輸入您的電子郵件及密碼</mat-card-title>
                 </mat-card-header>
                 <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
                     <mat-card-content>
@@ -11,7 +11,7 @@
                             <input formControlName="email" type="email" matInput [placeholder]="'login.email'| translate">
                             <mat-icon matSuffix>email</mat-icon>
                             <mat-error>
-                                please enter a valid email
+                               請輸入正確的電子郵件
                             </mat-error>
                         </mat-form-field>
 
@@ -25,11 +25,10 @@
                                 請輸入密碼
                             </mat-error>
                         </mat-form-field>
-
                     </mat-card-content>
                     <mat-card-actions>
                         <div>
-                            <button class="login" type="submit" mat-raised-button color="primary">Log In</button>
+                            <button class="login" type="submit" mat-raised-button color="primary">登入</button>
                         </div>
                     </mat-card-actions>
                 </form>
@@ -37,8 +36,8 @@
                     <div>
                         <button mat-button color="primary">{{'login.forgot_password'| translate}}</button>
                     </div>
+                   
                 </mat-card-actions>
-                <mat-divider></mat-divider>
                 <div>
                     <button mat-button color="primary">
                         <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>

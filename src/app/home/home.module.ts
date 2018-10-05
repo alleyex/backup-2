@@ -7,6 +7,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
 import { SharedModule } from '../shared/shared.module';
+import { CategoryComponent } from './category/category.component';
+import { RealtimeComponent } from './realtime/realtime.component';
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/home/', '.json');
@@ -14,7 +16,9 @@ export function createTranslateLoader(http: HttpClient) {
 
 @NgModule({
     declarations: [
-        HomeComponent
+        HomeComponent,
+        CategoryComponent,
+        RealtimeComponent
     ],
     imports: [
         SharedModule,

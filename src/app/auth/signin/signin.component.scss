@@ -5,23 +5,29 @@ article{
     flex-direction: column;
   }
   mat-card {
-    max-width: 480px;
-    margin:4px 8px;
-    min-height: 320px;  
+    max-width: 280px;
+    margin:4px 4px;
+    min-height: 360px;  
   }
-   
+  
+  mat-card-content{
+    margin:0px 8px;
+  }
   mat-form-field{ 
     width:100%;
   }
   
   mat-card-actions{
-    margin:0;
-    padding: 0;
+    margin:12px 8px;
     text-align: center;
   }
-  
+
+  mat-tab-group{
+    min-width: 340px;
+  }  
+ 
   div{
-    margin:20px 0px;
+    margin:0px 0px;
   } 
    
   button{
