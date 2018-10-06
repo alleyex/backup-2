@@ -1,14 +1,32 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
-            <app-category
-             *ngFor="let category of categorys" 
-             [category]="category" 
-             [ngClass]="{active:category.isActive}"
-             (click)="onClick(target)"></app-category>
-             <div #target>
-                 <app-realtime></app-realtime>
-             </div>
+            <app-category *ngFor="let category of categorys" 
+            [category]="category"           
+            (click)="moveScroll(category)"></app-category>
+            <div >
+                <app-realtime></app-realtime>
+            </div>
+
+
+            <div id="status">
+                  real time
+                <app-realtime></app-realtime>
+            </div>
+            <div id="notice" >
+                notice
+                <app-realtime></app-realtime>
+            </div>
+            <div id="service">
+                service
+                <app-realtime></app-realtime>
+            </div>
+            <div id="production">
+                production
+                <app-realtime></app-realtime>
+            </div>
+           
+
         </div>
     </div>
 
