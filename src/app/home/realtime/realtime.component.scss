@@ -1,0 +1,16 @@
+:host{   
+    display: block;   
+}
+
+.box {  
+    display: inline-block; 
+    border: 1px solid red;
+    width: calc(100% / 2 - 8px);
+    height:300px;    
+    margin:20px 4px;
+    border-radius: 5px ;
+}
+
+ 
+
+ 

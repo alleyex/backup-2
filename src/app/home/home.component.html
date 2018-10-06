@@ -1,15 +1,14 @@
-<h1>武陵農場</h1>
-<app-category 
-*ngFor="let category of categorys" 
-[category]="category" 
-[ngClass]="{active:category.isActive}" 
-(click)="category.isActive = !category.isActive"></app-category>
-<div class="comtainer">
+<div class="container">
     <div class="row">
         <div class="col-xs-12">
-            <h1>news</h1>
-            <app-realtime></app-realtime>
-
+            <app-category
+             *ngFor="let category of categorys" 
+             [category]="category" 
+             [ngClass]="{active:category.isActive}"
+             (click)="onClick(target)"></app-category>
+             <div #target>
+                 <app-realtime></app-realtime>
+             </div>
         </div>
     </div>
 

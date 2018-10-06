@@ -2,13 +2,12 @@
     display: inline-block;
     border:1px solid black;
     border-radius: 5px 5px 0 0;
-    padding: 20 px;
-    width: 300px;
-    margin: 30px;
+    padding: 4 px;
+    width: 240px;
+    margin: 4px;
     text-align: center;
 }
 
 :host(.active){
-    border: 3px solid blue;
-    padding: 18px;
+    border: 2px solid blue;   
 }
