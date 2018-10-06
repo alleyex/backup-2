@@ -10,6 +10,9 @@ import { SharedModule } from '../shared/shared.module';
 import { CategoryComponent } from './category/category.component';
 import { RealtimeComponent } from './realtime/realtime.component';
 import { BulletinComponent } from './bulletin/bulletin.component';
+import { DiscountComponent } from './discount/discount.component';
+import { ConvenienceComponent } from './convenience/convenience.component';
+import { RelatedComponent } from './related/related.component';
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/home/', '.json');
@@ -20,7 +23,10 @@ export function createTranslateLoader(http: HttpClient) {
         HomeComponent,
         CategoryComponent,
         RealtimeComponent,
-        BulletinComponent
+        BulletinComponent,
+        DiscountComponent,
+        RelatedComponent,
+        ConvenienceComponent  
     ],
     imports: [
         SharedModule,

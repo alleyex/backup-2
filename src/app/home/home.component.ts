@@ -9,10 +9,11 @@ import { Subscription } from 'rxjs';
 export class HomeComponent {
     categorys = [
         { title: '天氣路況', id: 'status' },
-        { title: '公告訊息', id: 'notice' },
-        { title: '便民服務', id: 'service' },
-        { title: '產品服務', id: 'production' }
-    ];   
+        { title: '優惠行程', id: 'discount' },
+        { title: '公告訊息', id: 'bulletin' },
+        { title: '便民服務', id: 'convenience' },
+        { title: '相關連結', id: 'related' }
+    ];
 
     getOffsetTop(element: any) {
         let offsetTop = element.offsetTop || 0;
@@ -22,16 +23,11 @@ export class HomeComponent {
         return offsetTop;
     }
 
-    onClick($element): void {        
-        window.scrollTo(0,this.getOffsetTop($element));
-    }
-
-    
-    moveScroll(category:any): void {  
+    moveScroll(category: any): void {
         let element = document.getElementById(category.id);
-        window.scrollTo(0,this.getOffsetTop(element));         
+        window.scrollTo(0, this.getOffsetTop(element));
+        // console.log(category.id);
+        // console.log(element);
+        // console.log(this.getOffsetTop(element));
     }
-
-
-
 }

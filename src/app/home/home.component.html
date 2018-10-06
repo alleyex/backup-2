@@ -2,23 +2,17 @@
     <div class="row">
         <div class="col-xs-12">
             <app-category *ngFor="let category of categorys" [category]="category" (click)="moveScroll(category)"></app-category>
-            <div id="status">
-                real time
-                <app-realtime></app-realtime>
+            <div>
+                <app-realtime id="status"></app-realtime>
+                <app-discount id="discount"></app-discount>
             </div>
-            <div id="notice">
-                notice
-                <app-bulletin></app-bulletin>
+            <div>
+                <app-bulletin id="bulletin"></app-bulletin>
             </div>
-            <div id="service">
-                service
-                <app-realtime></app-realtime>
+            <div  >
+                <app-convenience id="convenience"> </app-convenience>
+                <app-related id="related"></app-related>
             </div>
-            <div id="production">
-                production
-                <app-realtime></app-realtime>
-            </div>
-
         </div>
     </div>
 </div>

@@ -1,0 +1,10 @@
+:host{   
+    display: inline-block;  
+    width: calc(100% /2  - 24px);
+    min-width: 320px;
+    height:520px;    
+    border: 1px solid green;    
+    border-radius: 5px ;      
+    margin:20px 12px;
+    vertical-align: top;     
+}
