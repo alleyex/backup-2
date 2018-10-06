@@ -1,21 +1,14 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
-            <app-category *ngFor="let category of categorys" 
-            [category]="category"           
-            (click)="moveScroll(category)"></app-category>
-            <div >
-                <app-realtime></app-realtime>
-            </div>
-
-
+            <app-category *ngFor="let category of categorys" [category]="category" (click)="moveScroll(category)"></app-category>
             <div id="status">
-                  real time
+                real time
                 <app-realtime></app-realtime>
             </div>
-            <div id="notice" >
+            <div id="notice">
                 notice
-                <app-realtime></app-realtime>
+                <app-bulletin></app-bulletin>
             </div>
             <div id="service">
                 service
@@ -25,9 +18,7 @@
                 production
                 <app-realtime></app-realtime>
             </div>
-           
 
         </div>
     </div>
-
 </div>
