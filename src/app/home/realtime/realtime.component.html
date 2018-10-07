@@ -1,10 +1,15 @@
 <mat-card>
     <mat-card-header>
-        <mat-card-title><h5>路況天氣</h5></mat-card-title>
+        <mat-card-title>
+            <h5>即時路況</h5>
+        </mat-card-title>
     </mat-card-header>
     <mat-card-content>
-        <app-road  *ngFor="let status of statuses" [status]="status">
-            
+        <app-road 
+        *ngFor="let status of statuses; let i = index" 
+        [ngClass]="{marked: markedIndex ===i}" 
+        [status]="status"
+        (click)="markedIndex = i">        
         </app-road>
     </mat-card-content>
 </mat-card>

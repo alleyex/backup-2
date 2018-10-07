@@ -1,6 +1,8 @@
-<h6>
-    {{status.happendate}} -- {{ status.name}}
-    <span class="label label-default">{{status.roadtype}}</span>
+<h6>   
+    <span class="badge" [ngClass]="getStatusClass()">
+        {{status.roadtype}}
+    </span>
+       {{status.happendate}} #{{ status.name}} 
 </h6>
 <P>
     {{status.comment}}

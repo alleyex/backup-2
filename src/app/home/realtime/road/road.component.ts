@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RoadStatus } from '../realtime.service';
 
 @Component({
@@ -6,9 +6,14 @@ import { RoadStatus } from '../realtime.service';
     templateUrl: './road.component.html',
     styleUrls: ['./road.component.scss']
 })
-export class RoadComponent implements OnInit {
-    @Input() status: RoadStatus;
-    constructor() { }
+export class RoadComponent  {
+    @Input() status: RoadStatus;    
 
-    ngOnInit(): void { }
+    getStatusClass(){
+        return {
+            'badge-primary': this.status.roadtype ==='道路施工',
+            'badge-warning': this.status.roadtype ==='阻塞',
+            'badge-info': this.status.roadtype ==='其他'
+        }
+    }
 }

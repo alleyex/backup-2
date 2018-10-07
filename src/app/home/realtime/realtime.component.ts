@@ -8,6 +8,9 @@ import { RealtimeService, RoadStatus } from './realtime.service';
 })
 export class RealtimeComponent implements OnInit {
     statuses: RoadStatus[];
+    markedIndex = 0;
+
+
     constructor(private realtimeService: RealtimeService) { }
 
     get() {
@@ -18,5 +21,5 @@ export class RealtimeComponent implements OnInit {
     ngOnInit(): void {
         this.statuses = this.realtimeService.getRoadStatus();
         console.log(this.statuses);
-    }
+    } 
 }
