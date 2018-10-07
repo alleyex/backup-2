@@ -16,6 +16,7 @@ export class RealtimeComponent implements OnInit {
     }
 
     ngOnInit(): void {
-
+        this.statuses = this.realtimeService.getRoadStatus();
+        console.log(this.statuses);
     }
 }

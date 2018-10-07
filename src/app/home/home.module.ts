@@ -14,6 +14,7 @@ import { DiscountComponent } from './discount/discount.component';
 import { ConvenienceComponent } from './convenience/convenience.component';
 import { RelatedComponent } from './related/related.component';
 import { RealtimeService } from './realtime/realtime.service';
+import { RoadComponent } from './realtime/road/road.component';
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/home/', '.json');
@@ -27,7 +28,8 @@ export function createTranslateLoader(http: HttpClient) {
         BulletinComponent,
         DiscountComponent,
         RelatedComponent,
-        ConvenienceComponent  
+        ConvenienceComponent,
+        RoadComponent  
     ],
     imports: [
         SharedModule,

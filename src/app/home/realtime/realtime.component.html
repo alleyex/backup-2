@@ -1,2 +1,10 @@
-<div (click)="get()">天氣路況</div> 
-<div *ngFor="let status of statuses"> {{ status.name}} -- {{status.roadtype}} -- {{status.comment}}</div>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title><h5>路況天氣</h5></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <app-road  *ngFor="let status of statuses" [status]="status">
+            
+        </app-road>
+    </mat-card-content>
+</mat-card>
