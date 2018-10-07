@@ -1,5 +1,6 @@
-import { Component, OnInit, Output, EventEmitter, ElementRef } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ElementRef, Inject } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
     selector: 'app-home',
@@ -14,7 +15,7 @@ export class HomeComponent {
         { title: '便民服務', id: 'convenience' },
         { title: '相關連結', id: 'related' }
     ];
-
+     
     getOffsetTop(element: any) {
         let offsetTop = element.offsetTop || 0;
         if (element.offsetParent) {
@@ -25,9 +26,14 @@ export class HomeComponent {
 
     moveScroll(category: any): void {
         let element = document.getElementById(category.id);
-        window.scrollTo(0, this.getOffsetTop(element));
-        // console.log(category.id);
-        // console.log(element);
-        // console.log(this.getOffsetTop(element));
+
+        //smooth effect
+        let timer = 10;
+        var interval = setInterval(() => {
+            window.scrollTo(0, timer);
+            timer += 10;
+            if (timer >= this.getOffsetTop(element)) clearInterval(interval);
+        }, 5);
+
     }
 }
