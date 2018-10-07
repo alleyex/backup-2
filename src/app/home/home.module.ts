@@ -13,6 +13,7 @@ import { BulletinComponent } from './bulletin/bulletin.component';
 import { DiscountComponent } from './discount/discount.component';
 import { ConvenienceComponent } from './convenience/convenience.component';
 import { RelatedComponent } from './related/related.component';
+import { RealtimeService } from './realtime/realtime.service';
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/home/', '.json');
@@ -41,7 +42,7 @@ export function createTranslateLoader(http: HttpClient) {
             isolate: true
         })
     ],
-    exports: []
+    providers:[RealtimeService]
 })
 export class HomeModule {
     constructor(private readonly translate: TranslateService) {

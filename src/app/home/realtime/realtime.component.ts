@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RealtimeService, RoadStatus } from './realtime.service';
 
 @Component({
     selector: 'app-realtime',
@@ -6,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./realtime.component.scss']
 })
 export class RealtimeComponent implements OnInit {
-    constructor() { }
+    statuses: RoadStatus[];
+    constructor(private realtimeService: RealtimeService) { }
 
-    ngOnInit(): void { }
+    get() {
+        this.statuses = this.realtimeService.getRoadStatus();
+        console.log(this.statuses);
+    }
+
+    ngOnInit(): void {
+
+    }
 }

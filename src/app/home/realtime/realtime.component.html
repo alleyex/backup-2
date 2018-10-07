@@ -1,1 +1,2 @@
-<div>天氣路況</div>
+<div (click)="get()">天氣路況</div> 
+<div *ngFor="let status of statuses"> {{ status.name}} -- {{status.roadtype}} -- {{status.comment}}</div>
