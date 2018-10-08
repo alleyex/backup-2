@@ -12,3 +12,5 @@
 .marked{
     border:2px solid blue;
 }
+
+:host::-webkit-scrollbar {display:none}
