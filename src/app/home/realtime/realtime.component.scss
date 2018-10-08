@@ -1,16 +1,16 @@
 :host{   
     display: inline-block; 
-    width: calc(100% /2  - 24px);
+    width: calc(100% / 2 - 24px);
     min-width: 320px;
     height:360px;    
     border: 1px solid lightblue;        
-    margin:20px 12px;
+    margin: 20px 12px;
     vertical-align: top;       
     overflow-y:auto;
 }
 
 .marked{
-    border:2px solid blue;
+    border:2px solid gray;
 }
 
 :host::-webkit-scrollbar {display:none}

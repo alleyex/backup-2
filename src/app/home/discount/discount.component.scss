@@ -1,10 +1,12 @@
 :host{   
-    display: inline-block;  
+    display: inline-block; 
     width: calc(100% /2  - 24px);
     min-width: 320px;
     height:360px;    
-    border: 1px solid green;    
-    border-radius: 8px ;      
+    border: 1px solid lightblue;        
     margin:20px 12px;
-    vertical-align: top;     
+    vertical-align: top;       
+    overflow-y:auto;
 }
+
+:host::-webkit-scrollbar {display:none}
