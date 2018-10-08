@@ -1,0 +1,14 @@
+<div *ngFor="let station of stations">
+    <P>
+        目前溫度：<br> {{station.temperature}}
+    </P>
+    <p>
+        最高溫度：<br> {{station.highest}}
+    </p>
+    <p>
+        最低溫度：<br>{{station.lowest}}
+    </p>
+    <p>
+        濕度雨量：<br>{{station.humidity}} . {{station.rain}}
+    </p>
+</div>

@@ -22,7 +22,6 @@ export class RealtimeService {
         return list;
     }
 }
-
 export interface RoadStatus {
     happendate: string,
     name: string,

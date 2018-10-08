@@ -16,7 +16,10 @@ import { RelatedComponent } from './related/related.component';
 import { RealtimeService } from './realtime/realtime.service';
 import { RoadComponent } from './realtime/road/road.component';
 import { PackageComponent } from './discount/package/package.component';
-import { CameraComponent } from './camera/camera.component';
+import { MediaComponent } from './weather/media/media.component';
+import { WeatherComponent } from './weather/weather.component';
+import { StationComponent } from './weather/station/station.component';
+import { WeatherService } from './weather/weather.service';
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/home/', '.json');
@@ -31,9 +34,11 @@ export function createTranslateLoader(http: HttpClient) {
         DiscountComponent,
         RelatedComponent,
         ConvenienceComponent,
-        RoadComponent,
-        CameraComponent,
-        PackageComponent
+        RoadComponent,        
+        PackageComponent,
+        WeatherComponent,
+        MediaComponent,
+        StationComponent
     ],
     imports: [
         SharedModule,
@@ -48,7 +53,7 @@ export function createTranslateLoader(http: HttpClient) {
             isolate: true
         })
     ],
-    providers:[RealtimeService]
+    providers:[RealtimeService,WeatherService]
 })
 export class HomeModule {
     constructor(private readonly translate: TranslateService) {

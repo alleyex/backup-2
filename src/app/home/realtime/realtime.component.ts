@@ -11,14 +11,8 @@ export class RealtimeComponent implements OnInit {
     markedIndex = 100;
 
     constructor(private realtimeService: RealtimeService) { }
-
-    get() {
-        this.statuses = this.realtimeService.getRoadStatus();
-        console.log(this.statuses);
-    }
-
+       
     ngOnInit(): void {
-        this.statuses = this.realtimeService.getRoadStatus();
-        console.log(this.statuses);
+        this.statuses = this.realtimeService.getRoadStatus();       
     } 
 }

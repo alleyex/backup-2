@@ -1,0 +1,36 @@
+:host{   
+    display: inline-block; 
+    width: calc(100% /2  - 24px);
+    min-width: 320px;
+    height:360px;    
+    //border: 1px solid lightblue;   
+    margin:20px 12px;
+    vertical-align: top;       
+    overflow-y:auto;    
+}
+
+:host::-webkit-scrollbar {display:none}
+
+.contain{ 
+    display: inline-block;
+    margin: 24px 24px;
+}
+
+.box{
+    display: inline-block;    
+    margin: 24px 0;
+}
+
+.camera{   
+    display: inline-block;      
+    box-shadow: 12px 12px 12px #ccc;   
+    vertical-align: top;     
+}
+
+.weather{ 
+    display: inline-block;      
+    width: 140px ;  
+    padding:0 0 0  24px ;
+    vertical-align: top;      
+}
+   

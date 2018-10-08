@@ -1,10 +1,6 @@
 <div>
-    <div>
-        <img src="assets/images/realtime/traffic.png" alt="即時路況">
-    </div>
-    <div>
-        <app-road *ngFor="let status of statuses; let i = index" [ngClass]="{marked: markedIndex ===i}" [status]="status"
-            (click)="markedIndex = 100">
-        </app-road>
-    </div>
+    <img src="assets/images/realtime/traffic.png" alt="即時路況">
+    <app-road *ngFor="let status of statuses; let i = index" [ngClass]="{marked: markedIndex ===i}" [status]="status"
+        (click)="markedIndex = 100">
+    </app-road>
 </div>

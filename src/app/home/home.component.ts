@@ -9,12 +9,12 @@ import { DOCUMENT } from '@angular/common';
 })
 export class HomeComponent {
     categorys = [
-        { title: '天氣路況', id: 'status' },
+        { title: '即時路況', id: 'status' },
         // { title: '優惠行程', id: 'discount' },
+        { title: '即時氣象', id: 'weather' },
         { title: '公告訊息', id: 'bulletin' },
         { title: '便民服務', id: 'convenience' },
-        { title: '相關連結', id: 'related' },
-        { title: '即時影像', id: 'camera' }
+        { title: '相關連結', id: 'related' }
     ];
 
     getOffsetTop(element: any) {
