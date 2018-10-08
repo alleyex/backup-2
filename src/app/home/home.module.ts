@@ -15,6 +15,8 @@ import { ConvenienceComponent } from './convenience/convenience.component';
 import { RelatedComponent } from './related/related.component';
 import { RealtimeService } from './realtime/realtime.service';
 import { RoadComponent } from './realtime/road/road.component';
+import { PackageComponent } from './discount/package/package.component';
+import { CameraComponent } from './camera/camera.component';
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/home/', '.json');
@@ -29,7 +31,9 @@ export function createTranslateLoader(http: HttpClient) {
         DiscountComponent,
         RelatedComponent,
         ConvenienceComponent,
-        RoadComponent  
+        RoadComponent,
+        CameraComponent,
+        PackageComponent
     ],
     imports: [
         SharedModule,

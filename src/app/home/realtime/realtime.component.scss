@@ -9,8 +9,12 @@
     overflow-y:auto;
 }
 
+:host::-webkit-scrollbar {display:none}
+
 .marked{
     border:2px solid gray;
 }
 
-:host::-webkit-scrollbar {display:none}
+div{
+ margin: 12px 24px;
+}

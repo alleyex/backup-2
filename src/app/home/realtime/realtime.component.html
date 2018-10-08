@@ -1,12 +1,10 @@
-<mat-card>
-    <mat-card-header>
-        <mat-card-title>
-            <img src="assets/images/realtime/traffic.png" alt="Smiley face">
-        </mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
+<div>
+    <div>
+        <img src="assets/images/realtime/traffic.png" alt="即時路況">
+    </div>
+    <div>
         <app-road *ngFor="let status of statuses; let i = index" [ngClass]="{marked: markedIndex ===i}" [status]="status"
-            (click)="markedIndex = i">
+            (click)="markedIndex = 100">
         </app-road>
-    </mat-card-content>
-</mat-card>
+    </div>
+</div>

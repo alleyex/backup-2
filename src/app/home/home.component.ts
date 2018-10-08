@@ -10,12 +10,13 @@ import { DOCUMENT } from '@angular/common';
 export class HomeComponent {
     categorys = [
         { title: '天氣路況', id: 'status' },
-        { title: '優惠行程', id: 'discount' },
+        // { title: '優惠行程', id: 'discount' },
         { title: '公告訊息', id: 'bulletin' },
         { title: '便民服務', id: 'convenience' },
-        { title: '相關連結', id: 'related' }
+        { title: '相關連結', id: 'related' },
+        { title: '即時影像', id: 'camera' }
     ];
-     
+
     getOffsetTop(element: any) {
         let offsetTop = element.offsetTop || 0;
         if (element.offsetParent) {

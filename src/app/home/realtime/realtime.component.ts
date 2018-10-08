@@ -8,8 +8,7 @@ import { RealtimeService, RoadStatus } from './realtime.service';
 })
 export class RealtimeComponent implements OnInit {
     statuses: RoadStatus[];
-    markedIndex = 0;
-
+    markedIndex = 100;
 
     constructor(private realtimeService: RealtimeService) { }
 
