@@ -1,10 +1,19 @@
 :host{   
     display: inline-block;  
-    width: calc(100% /2  - 24px);
+    width: calc(100%  - 24px);
     min-width: 320px;
-    height:520px;    
-    border: 1px solid green;    
-    border-radius: 5px ;      
+    // height:520px;    
+    // border: 1px solid green;    
+    // border-radius: 5px ;      
     margin:20px 12px;
     vertical-align: top;     
+}
+
+.gov{  
+    display: inline-block;  
+    border-radius: 12px ;      
+    box-shadow: 12px 12px 12px #ccc;  
+    overflow: hidden;    
+    width: 180px;    
+    margin: 20px;
 }
