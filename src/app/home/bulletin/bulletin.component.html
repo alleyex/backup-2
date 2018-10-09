@@ -1,1 +1,18 @@
-<div>公告訊息</div>
+<mat-tab-group dynamicHeight>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            農場公告
+        </ng-template>
+        <!-- <div class="example-small-box mat-elevation-z4"> -->
+           <app-announcement></app-announcement>
+        <!-- </div> -->
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            最新訊息
+        </ng-template>
+       <!-- <div class="example-large-box mat-elevation-z4"> -->
+            <app-news></app-news>
+      <!-- </div> -->
+    </mat-tab>
+</mat-tab-group>

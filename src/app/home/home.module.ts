@@ -20,6 +20,8 @@ import { MediaComponent } from './weather/media/media.component';
 import { WeatherComponent } from './weather/weather.component';
 import { StationComponent } from './weather/station/station.component';
 import { WeatherService } from './weather/weather.service';
+import { AnnouncementComponent } from './bulletin/announcement/announcement.component';
+import { NewsComponent } from './bulletin/news/news.component';
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/home/', '.json');
@@ -38,7 +40,9 @@ export function createTranslateLoader(http: HttpClient) {
         PackageComponent,
         WeatherComponent,
         MediaComponent,
-        StationComponent
+        StationComponent,
+        AnnouncementComponent,
+        NewsComponent
     ],
     imports: [
         SharedModule,
