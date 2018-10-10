@@ -13,7 +13,10 @@ export class RoadComponent  {
         return {
             'badge-primary': this.status.roadtype ==='道路施工',
             'badge-warning': this.status.roadtype ==='阻塞',
+            'badge-danger': this.status.roadtype ==='交通障礙',
             'badge-info': this.status.roadtype ==='其他'
+
+            
         }
     }
 }
