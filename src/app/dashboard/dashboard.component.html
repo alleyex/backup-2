@@ -3,10 +3,13 @@
         <mat-icon>menu</mat-icon>
     </button>
     <div></div>
+    <button mat-icon-button (click)="onHome()">
+        <mat-icon>home</mat-icon>
+    </button>
     <a href="https://mercury-object.firebaseapp.com/">
         <mat-icon style="font-size:24px; color:black ;margin: 12px ">business</mat-icon>
-    </a>     
-    <button mat-icon-button>
+    </a>
+    <!-- <button mat-icon-button>
         <mat-icon>translate</mat-icon>
     </button>
     <button mat-icon-button (click)="onSignin()">
@@ -14,9 +17,9 @@
     </button>
     <button mat-icon-button>
         <mat-icon>help_outline</mat-icon>
-    </button>
+    </button> -->
 </mat-toolbar>
 <router-outlet></router-outlet>
 <footer>
-       <app-footer></app-footer>        
+    <app-footer></app-footer>
 </footer>

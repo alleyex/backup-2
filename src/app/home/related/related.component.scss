@@ -1,6 +1,6 @@
 :host{   
     display: inline-block;  
-    width: calc(100% /2  - 24px);
+    width: calc(100%   - 24px);
     min-width: 320px;
     height:520px;    
     // border: 1px solid green;    
@@ -16,4 +16,23 @@
     overflow: hidden;    
    
     margin: 6px;
+}
+
+@media only screen and (max-width:1200px) {
+   
+}
+@media screen and (max-width:1023px) {
+
+}
+@media only screen and (max-width:768px) {
+    .gov{           
+        width: calc(100% / 2 - 24px );    
+        margin: 4px;       
+    }
+}
+@media only screen and (max-width:480px) {
+    .gov{           
+        width: calc(100% / 2 - 24px );    
+        margin: 4px;       
+    }
 }

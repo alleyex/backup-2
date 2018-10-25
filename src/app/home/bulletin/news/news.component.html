@@ -12,7 +12,7 @@
     <!-- Title Column -->
     <ng-container matColumnDef="title">
       <!-- <th mat-header-cell *matHeaderCellDef> Name </th> -->
-      <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+      <td mat-cell *matCellDef="let element" (click) = "click(element.link)"> {{element.title}} </td>
     </ng-container>
   
     <!-- date Column -->
