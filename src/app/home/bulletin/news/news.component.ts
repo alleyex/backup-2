@@ -13,8 +13,10 @@ export class NewsComponent {
 
     constructor(private dialog: MatDialog) { }
 
-    click(hyperlink) {       
-        this.dialog.open(DialogComponent, { data: { link: hyperlink } });
+    click(hyperlink) {
+        if (hyperlink != '') {
+            this.dialog.open(DialogComponent, { data: { link: hyperlink } });
+        }
     }
 }
 

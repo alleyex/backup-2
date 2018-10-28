@@ -3,16 +3,12 @@
         <div class="col-xs-12">
             <app-category *ngFor="let category of categorys" [category]="category" (click)="moveScroll(category)"></app-category>
             <div>
-                <app-realtime id="status"></app-realtime>
-                <app-weather id="weather"></app-weather>
-            </div>
-            <div>
-               <app-convenience id="convenience"> </app-convenience>
+                <app-convenience id="convenience"> </app-convenience>
             </div>
             <div>
                 <app-bulletin id="bulletin"></app-bulletin>
             </div>
-            <div  >
+            <div>
                 <!-- <app-convenience id="convenience"> </app-convenience> -->
                 <app-related id="related"></app-related>
             </div>

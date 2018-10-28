@@ -10,7 +10,7 @@ import { DOCUMENT } from '@angular/common';
 export class HomeComponent {
     categorys = [
         { title: '即時路況', id: 'status' },
-        // { title: '優惠行程', id: 'discount' },
+        { title: '優惠行程', id: 'discount' },
         { title: '即時氣象', id: 'weather' },
         { title: '公告訊息', id: 'bulletin' },
         { title: '便民服務', id: 'convenience' },
@@ -26,15 +26,15 @@ export class HomeComponent {
     }
 
     moveScroll(category: any): void {
-        let element = document.getElementById(category.id);
+        const element = document.getElementById(category.id);
+        console.log(element);
 
-        //smooth effect
+        // smooth effect
         let timer = 10;
-        var interval = setInterval(() => {
+        const interval = setInterval(() => {
             window.scrollTo(0, timer);
             timer += 10;
-            if (timer >= this.getOffsetTop(element)) clearInterval(interval);
+            if (timer >= this.getOffsetTop(element)) { clearInterval(interval); }
         }, 5);
-
     }
 }
