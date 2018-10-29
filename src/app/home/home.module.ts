@@ -24,6 +24,7 @@ import { AnnouncementComponent } from './bulletin/announcement/announcement.comp
 import { NewsComponent } from './bulletin/news/news.component';
 import { DialogComponent } from './bulletin/dialog.component';
 import { InformationComponent } from './convenience/information/information.component';
+import { PopupComponent } from './discount/popup.component';
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/home/', '.json');
@@ -46,7 +47,8 @@ export function createTranslateLoader(http: HttpClient) {
         AnnouncementComponent,
         NewsComponent,
         DialogComponent,
-        InformationComponent
+        InformationComponent,
+        PopupComponent
     ],
     imports: [
         SharedModule,
@@ -62,7 +64,7 @@ export function createTranslateLoader(http: HttpClient) {
         })
     ],
     providers: [RealtimeService, WeatherService],
-    entryComponents: [DialogComponent]
+    entryComponents: [DialogComponent, PopupComponent]
 })
 export class HomeModule {
     constructor(private readonly translate: TranslateService) {
