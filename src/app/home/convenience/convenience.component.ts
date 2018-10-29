@@ -1,12 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-convenience',
     templateUrl: './convenience.component.html',
     styleUrls: ['./convenience.component.scss']
 })
-export class ConvenienceComponent implements OnInit {
-    constructor() { }
+export class ConvenienceComponent {
+    constructor(private router: Router) { }
 
-    ngOnInit(): void { }
+    onInformation() {
+        this.router.navigateByUrl('/home/information');
+    }
 }

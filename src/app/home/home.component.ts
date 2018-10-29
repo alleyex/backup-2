@@ -26,15 +26,19 @@ export class HomeComponent {
     }
 
     moveScroll(category: any): void {
-        const element = document.getElementById(category.id);
-        console.log(element);
+        console.log(category);
 
-        // smooth effect
-        let timer = 10;
-        const interval = setInterval(() => {
-            window.scrollTo(0, timer);
-            timer += 10;
-            if (timer >= this.getOffsetTop(element)) { clearInterval(interval); }
-        }, 5);
+        const element = document.getElementById(category.id);
+        if (element) {
+            console.log(element);
+
+            // smooth effect
+            let timer = 10;
+            const interval = setInterval(() => {
+                window.scrollTo(0, timer);
+                timer += 10;
+                if (timer >= this.getOffsetTop(element)) { clearInterval(interval); }
+            }, 5);
+        }
     }
 }

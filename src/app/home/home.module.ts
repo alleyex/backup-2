@@ -23,6 +23,7 @@ import { WeatherService } from './weather/weather.service';
 import { AnnouncementComponent } from './bulletin/announcement/announcement.component';
 import { NewsComponent } from './bulletin/news/news.component';
 import { DialogComponent } from './bulletin/dialog.component';
+import { InformationComponent } from './convenience/information/information.component';
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/home/', '.json');
@@ -37,18 +38,19 @@ export function createTranslateLoader(http: HttpClient) {
         DiscountComponent,
         RelatedComponent,
         ConvenienceComponent,
-        RoadComponent,        
+        RoadComponent,
         PackageComponent,
         WeatherComponent,
         MediaComponent,
         StationComponent,
         AnnouncementComponent,
         NewsComponent,
-        DialogComponent
+        DialogComponent,
+        InformationComponent
     ],
     imports: [
         SharedModule,
-        HomeRoutingModule,      
+        HomeRoutingModule,
         HttpClientModule,
         TranslateModule.forChild({
             loader: {
@@ -59,7 +61,7 @@ export function createTranslateLoader(http: HttpClient) {
             isolate: true
         })
     ],
-    providers:[RealtimeService,WeatherService],    
+    providers: [RealtimeService, WeatherService],
     entryComponents: [DialogComponent]
 })
 export class HomeModule {

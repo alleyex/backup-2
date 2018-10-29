@@ -9,7 +9,7 @@ const appRoutes: Routes = [
     { path: 'user', loadChildren: './auth/auth.module#AuthModule' },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: '**', component: PageNotFoundComponent }
-]
+];
 
 @NgModule({
     imports: [
