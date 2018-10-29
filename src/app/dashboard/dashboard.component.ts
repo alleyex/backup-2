@@ -6,14 +6,14 @@ import { Router } from '@angular/router';
     templateUrl: './dashboard.component.html',
     styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent  {  
-    constructor(private router: Router){}
+export class DashboardComponent {
+    constructor(private router: Router) { }
 
-    onSignin(){
+    onSignin() {
         this.router.navigateByUrl('/user/signin');
     }
 
-    onHome(){
-        this.router.navigateByUrl('/home')
+    onHome() {
+        this.router.navigateByUrl('/home');
     }
 }
