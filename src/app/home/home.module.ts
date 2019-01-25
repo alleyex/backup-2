@@ -25,6 +25,7 @@ import { NewsComponent } from './bulletin/news/news.component';
 import { DialogComponent } from './bulletin/dialog.component';
 import { InformationComponent } from './convenience/information/information.component';
 import { PopupComponent } from './discount/popup.component';
+import { SakuraComponent } from './bulletin/sakura/sakura.component';
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/home/', '.json');
@@ -48,7 +49,8 @@ export function createTranslateLoader(http: HttpClient) {
         NewsComponent,
         DialogComponent,
         InformationComponent,
-        PopupComponent
+        PopupComponent,
+        SakuraComponent
     ],
     imports: [
         SharedModule,

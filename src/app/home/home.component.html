@@ -2,11 +2,12 @@
     <div class="row">
         <div class="col-xs-12">
             <app-category *ngFor="let category of categorys" [category]="category" (click)="moveScroll(category)"></app-category>
-            <div>
-                <app-convenience id="convenience"> </app-convenience>
-            </div>
+
             <div>
                 <app-bulletin id="bulletin"></app-bulletin>
+            </div>
+            <div>
+                <app-convenience id="convenience"> </app-convenience>
             </div>
             <div>
                 <app-related id="related"></app-related>
